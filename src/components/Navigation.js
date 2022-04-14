@@ -1,16 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Navigation.css';
 
-class Navigation extends React.Component {
-    render() {
-        return (
-            <div className='navi'>
+function Navigation() {
+    return (
+        <>
+            <h1>
+                <Link to="/" className='logo'>MovieMoore</Link>
+            </h1>
+            <div>
                 <Link to="/" className='link'>Home</Link>
-                <Link to="/about" className='link'>About</Link>
+                <Link to="/genre" className='link'>Genre</Link>
+                <Link to="/ranking" className='link'>Ranking</Link>
             </div>
-        )
-    }
+            <button>
+                <Link to="/signIn" className='signIn' >Sign in</Link>
+            </button>
+        </>
+    )
 }
 
 export default Navigation;
