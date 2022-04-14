@@ -1,8 +1,9 @@
 import React from 'react';
-import "./App.css"
 import { BrowserRouter, Route, Routes } from 'react-router-dom'; 
 import Home from './routes/Home';
-import About from './routes/About'
+import Genre from './routes/Genre';
+import Ranking from './routes/Ranking';
+import SignIn from './routes/SignIn';
 import Navigation from './components/Navigation';
 
 class App extends React.Component {
@@ -12,7 +13,9 @@ class App extends React.Component {
         <Navigation />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/genre" element={<Genre />} />
+          <Route path="/ranking" element={<Ranking />} />
+          <Route path="/signIn" element={<SignIn />} />
         </Routes>
       </BrowserRouter>
     )
